@@ -123,3 +123,6 @@ textarea::placeholder{font-style:italic;opacity:.6}
 @keyframes eq{to{height:18px}}
 @media(max-width:700px){body{font-size:17px}.menu-btn{display:block}.menu{grid-template-columns:repeat(4,1fr)}.title{display:none}.bottom .btn{padding:.6em 1em}#vol{width:56px}.scene.r .card{text-align:left}.scene.r .rule{margin-left:0}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.vines path{stroke-dashoffset:0}.poem p,.intro-name,.seal,.hint{opacity:1}.petals{display:none}}
+.flip .in,.env .back,.env .paper,.env .lid{display:block}
+.flip .f,.flip .b{-webkit-backface-visibility:hidden}
+.flip .in{-webkit-transform-style:preserve-3d}
