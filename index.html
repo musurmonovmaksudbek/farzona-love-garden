@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Farzona — Gullar bog‘i</title>
+<meta name="description" content="Farzona uchun tayyorlangan kichik gullar bog‘i.">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="intro" role="dialog" aria-label="Kirish">
+  <svg class="vines" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M30 800C30 600 110 560 90 420S40 220 120 0"/><path d="M370 800C370 620 290 570 310 430S360 210 280 0"/>
+    <path d="M90 420c40-20 70-10 90-40M310 430c-40-20-70-10-90-40M60 250c30-10 50-30 60-60M340 250c-30-10-50-30-60-60"/>
+  </svg>
+  <div class="petals" id="introPetals" aria-hidden="true"></div>
+  <div class="intro-body">
+    <p class="intro-name">Farzona</p>
+    <button class="seal" id="seal" aria-label="Muhrni ochish"><span>F</span></button>
+    <p class="hint" id="sealHint">Muhrni ochish uchun bosing</p>
+    <div class="reveal" id="reveal" hidden>
+      <h1>Farzona, bu kichik go‘zallik olami sen uchun...</h1>
+      <p>Ba’zan bir uchrashuv qalbda chiroyli taassurot qoldiradi.</p>
+      <button class="btn primary" id="enter">Sehrli olamga kirish</button>
+    </div>
+  </div>
+  <button class="skip" id="skip">O‘tkazib yuborish</button>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="count" aria-live="polite"><span id="cur">01</span> / 20</div>
+    <div class="line" role="progressbar" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1" id="bar"><i id="fill"></i></div>
+    <button class="btn ghost menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menyu</button>
+  </header>
+  <nav id="menu" class="menu" hidden aria-label="Sahnalar"></nav>
+  <main id="stage" tabindex="-1"></main>
+  <footer class="bottom">
+    <button class="btn ghost" id="prev">Ortga</button>
+    <button class="btn ghost" id="restart">Boshidan</button>
+    <button class="btn primary" id="next">Keyinga</button>
+  </footer>
+  <div class="player" id="player" role="group" aria-label="Musiqa pleyeri">
+    <button class="icon" id="pp" aria-label="Ijro etish">▶</button>
+    <div class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <span class="title" id="trackTitle"></span>
+    <button class="icon" id="mute" aria-label="Ovozni o‘chirish">♪</button>
+    <input type="range" id="vol" min="0" max="1" step="0.05" value="0.7" aria-label="Ovoz balandligi">
+    <span class="aerr" id="aerr" hidden></span>
+  </div>
+</div>
+<audio id="audio" preload="metadata"></audio>
+<script src="./script.js"></script>
+</body>
+</html>
