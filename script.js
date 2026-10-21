@@ -9,7 +9,7 @@ const CONFIG = {
 };
 
 const $ = (s, r = document) => r.querySelector(s);
-const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduce = false;
 
 /* ===== Gul illyustratsiyalari (SVG) ===== */
 const ring = (n, rx, ry, d, fill, op = 1) => Array.from({ length: n }, (_, i) =>
