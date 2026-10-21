@@ -4,7 +4,7 @@ const CONFIG = {
   AUDIO_SRC: "./assets/music.mp3",          // musiqa fayli yo‘li
   TRACK_TITLE: "Ja tebia liubliu",          // pleyerda ko‘rinadigan nom
   START_AT: 110,                            // 01:50 = 110 soniya
-  API_URL: "",                              // Worker URL, masalan: https://farzona-message.NOM.workers.dev
+  API_URL: "https://farzona-message.musurmonovmaksudbek.workers.dev",                              // Worker URL, masalan: https://farzona-message.NOM.workers.dev
   MAX_LEN: 1000
 };
 
