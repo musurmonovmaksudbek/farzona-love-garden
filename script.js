@@ -194,6 +194,7 @@ vol.oninput = () => { audio.volume = +vol.value; if (audio.muted && audio.volume
 const intro = $("#intro");
 for (let i = 0; i < 22; i++) { const p = document.createElement("span"); p.className = "p" + (i % 3 ? "" : " d"); p.style.cssText = `left:${Math.random() * 100}%;animation-duration:${8 + Math.random() * 8}s;animation-delay:-${Math.random() * 12}s;transform:scale(${.6 + Math.random()})`; $("#introPetals").append(p); }
 function enter() {
+  togglePlay(true);
   intro.classList.add("out"); $("#app").hidden = false;
   setTimeout(() => { intro.remove(); stage.focus({ preventScroll: true }); }, reduce ? 0 : 900);
 }
